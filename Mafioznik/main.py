@@ -26,7 +26,7 @@ async def on_message(message):
     global channel
     guild = message.guild
 # ________________Рега_______________________
-    if message.content.find ("/join") != -1 and game_started == False:
+    if message.content.find ("!join") != -1 and game_started == False:
         print(players)
         if len(players) <= 3:
             players[1 + len(players)] = str(message.author.name)
