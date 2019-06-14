@@ -209,7 +209,17 @@ async def on_message(message):
                 user = message.author
                 await user.add_roles(role)
 
-
+    if message.content.find("!help") != -1:
+        await message.channel.send("""
+        Список команд (Перед каждой командой необходимо поставить ! знак):
+        help - список команд
+        join - присоедениться к игре
+        start - начать игру (необходимо от 5 человек)
+        side - узнать свою карту
+        shoot # - убить игрока под номером # (только в канале мафии)
+        vote - начать голосование
+        kill # - убить игрока, которого вы считаете мафией (только в игровом канале)
+        """)
 
 
 
